@@ -54,7 +54,7 @@ public class HttpClient {
                 String temp = null;
                 while ((temp = br.readLine()) != null) {
                     sbf.append(temp);
-                    sbf.append("\r\n");
+                    //sbf.append("\r\n");
                 }
                 result = sbf.toString();
             }
@@ -128,7 +128,7 @@ public class HttpClient {
                 // 循环遍历一行一行读取数据
                 while ((temp = br.readLine()) != null) {
                     sbf.append(temp);
-                    sbf.append("\r\n");
+                    //sbf.append("\r\n");
                 }
                 result = sbf.toString();
             }

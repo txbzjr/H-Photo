@@ -22,11 +22,15 @@ public class Controller{
             alert.show();
         }else {
             Task<Void> task = new Task<Void>() {
-                /*@Override
+                @Override
                 protected void succeeded() {
                     super.succeeded();
-                    updateMessage("Succeeded");
-                }*/
+                    if(login.getResult().equals("admin0")){
+                        updateMessage("欢迎回来，admin");
+                    }else {
+                        updateMessage("登录失败");
+                    }
+                }
                 @Override
                 protected void cancelled() {
                     super.cancelled();
@@ -39,8 +43,8 @@ public class Controller{
                 }
                 @Override
                 protected Void call() throws Exception {
-                    Login login = new Login(new User(usernametf.getText(),passwdtf.getText()));
-                    updateMessage(login.VerifyUser());
+                    updateMessage("请稍后...");
+                    login.VerifyUser();
                     return null;
                 }
             };
