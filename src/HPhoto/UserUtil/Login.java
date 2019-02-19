@@ -19,8 +19,8 @@ public class Login {
         System.out.println(passwd);
         if(!username.isEmpty()&&!passwd.isEmpty())
             if(passwd.equals("admin")&&username.equals("admin"))
-                return "登陆成功,欢迎您，亲爱的管理员";
-        return "登陆失败";
+                return "admin0";//admin登陆成功
+        return "admin1";//admin登陆失败
     }
 
 }
